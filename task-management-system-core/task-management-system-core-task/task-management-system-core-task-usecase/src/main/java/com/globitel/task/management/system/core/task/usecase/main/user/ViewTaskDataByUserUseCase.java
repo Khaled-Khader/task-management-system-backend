@@ -13,8 +13,6 @@ import com.globitel.task.management.system.core.task.factory.response.TaskDataRe
 import com.globitel.task.management.system.core.task.factory.response.TaskResponse;
 import com.globitel.task.management.system.core.task.identity.TaskIdentity;
 import com.globitel.task.management.system.core.task.usecase.error.TaskError;
-import com.globitel.task.management.system.core.user.factory.domain.UserUseCaseFactoryDomain;
-import com.globitel.task.management.system.core.user.identity.UserIdentity;
 import jakarta.validation.Validator;
 
 import java.util.List;
@@ -48,6 +46,18 @@ public class ViewTaskDataByUserUseCase extends ValidatorFunctionalUseCase<TaskDa
 
         List<CommentIdentity>commentIdentities=commentUseCaseFactoryDomain.returnTaskCommentsUseCase().execute(taskIdentity);
 
+        List<CommentResponse> comments = commentIdentities.stream()
+                .map(comment -> new CommentResponse(
+                        comment.getUuid(),
+                        comment.getUser().getName(),
+                        comment.getContent(),
+                        comment.getUser().getUserRole(),
+                        comment.getTask().getUuid(),
+                        comment.getReplayedComment() != null
+                                ? comment.getReplayedComment().getUuid()
+                                : null
+                ))
+                .toList();
         return new TaskDataResponse(
                 new TaskResponse(
                         taskIdentity.getUuid(),
@@ -58,14 +68,7 @@ public class ViewTaskDataByUserUseCase extends ValidatorFunctionalUseCase<TaskDa
                         taskIdentity.getDueDate(),
                         taskIdentity.getTaskStatus()
                 ),
-                commentIdentities.stream()
-                        .map((comment)->new CommentResponse(
-                                comment.getUuid(),
-                                comment.getUser().getName(),
-                                comment.getContent(),
-                                comment.getUser().getUserRole(),
-                                comment.getReplayedComment().getUuid()
-                        )).toList()
+                comments
         );
     }
 }

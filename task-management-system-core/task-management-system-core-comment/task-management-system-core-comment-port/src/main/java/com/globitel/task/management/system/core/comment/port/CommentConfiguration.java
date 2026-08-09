@@ -7,7 +7,9 @@ import com.globitel.task.management.system.core.comment.jpa.CommentJpa;
 import com.globitel.task.management.system.core.comment.jpa.CommentRepository;
 import com.globitel.task.management.system.core.comment.usecase.CommentUseCaseFactoryDomainImpl;
 import com.globitel.task.management.system.core.comment.usecase.CommentUseCaseFactoryImpl;
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.user.factory.domain.UserUseCaseFactoryDomain;
 import jakarta.validation.Validator;
@@ -27,8 +29,8 @@ public class CommentConfiguration {
     }
 
     @Bean
-    public CommentUseCaseFactory  commentUseCaseFactory(Validator validator,TMSSecurityContext  tmsSecurityContext, CommentDao  commentDao, UserUseCaseFactoryDomain  userUseCaseFactoryDomain, TaskUseCaseFactoryDomain   taskUseCaseFactoryDomain) {
-        return new CommentUseCaseFactoryImpl(commentDao,validator,tmsSecurityContext,userUseCaseFactoryDomain,taskUseCaseFactoryDomain);
+    public CommentUseCaseFactory  commentUseCaseFactory(Validator validator, TMSSecurityContext  tmsSecurityContext, CommentDao  commentDao, UserUseCaseFactoryDomain  userUseCaseFactoryDomain, TaskUseCaseFactoryDomain   taskUseCaseFactoryDomain, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TMSWebSocket tmsWebSocket) {
+        return new CommentUseCaseFactoryImpl(commentDao,validator,tmsSecurityContext,userUseCaseFactoryDomain,taskUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tmsWebSocket);
     }
 
     @Bean

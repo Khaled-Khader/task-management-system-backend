@@ -17,12 +17,11 @@
         <module>task-management-system-core-notification-identity</module>
         <module>task-management-system-core-notification-usecase</module>
         <module>task-management-system-core-notification-port</module>
+        <module>task-management-system-core-notification-jpa</module>
+        <module>task-management-system-core-notification-factory-domain</module>
+        <module>task-management-system-core-notification-factory</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+
 
 </project>

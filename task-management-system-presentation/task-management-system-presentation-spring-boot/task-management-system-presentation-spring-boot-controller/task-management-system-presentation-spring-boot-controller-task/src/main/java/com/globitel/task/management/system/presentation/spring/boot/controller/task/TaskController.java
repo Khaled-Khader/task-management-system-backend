@@ -66,12 +66,28 @@ public class TaskController {
         return taskUseCaseFactory.updateTaskStatusForUserUseCase().execute(updateTaskForUserRequest);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/{uuid}")
+    public TaskResponse findTaskByUuid(
+            @PathVariable String uuid
+    ) {
+        return taskUseCaseFactory
+                .findTaskByUuidUseCase()
+                .execute(uuid);
+    }
 
-    //TODO:Fix the response
+
+
     @PreAuthorize("hasRole('USER')")
     @GetMapping("user/task-data/")
-    public TaskDataResponse findAllTasksForUser(@RequestParam(name = "taskUuid") String taskUuid ) {
+    public TaskDataResponse viewTaskData(@RequestParam(name = "taskUuid") String taskUuid ) {
         return taskUseCaseFactory.viewTaskDataUseCase().execute(new ViewTaskDataRequest(taskUuid));
     }
 
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("admin/task-data/")
+    public TaskDataResponse viewTaskDataBuAdmin(@RequestParam(name = "taskUuid") String taskUuid ) {
+        return taskUseCaseFactory.viewTaskDataByAdminUseCase().execute(new ViewTaskDataRequest(taskUuid));
+    }
 }

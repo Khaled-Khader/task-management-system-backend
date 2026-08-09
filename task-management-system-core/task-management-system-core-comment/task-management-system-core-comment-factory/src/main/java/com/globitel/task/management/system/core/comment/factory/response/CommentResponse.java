@@ -7,6 +7,7 @@ public record CommentResponse(
         String name,
         String content,
         UserRole userRole,
+        String taskUuid,
         String parentCommentUuid
 ) {
 }

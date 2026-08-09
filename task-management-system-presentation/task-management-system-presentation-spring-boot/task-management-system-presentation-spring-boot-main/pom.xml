@@ -25,6 +25,11 @@
            <artifactId>mysql-connector-j</artifactId>
        </dependency>
        <dependency>
+           <groupId>${project.parent.groupId}</groupId>
+           <artifactId>task-management-system-presentation-spring-boot-web-socket</artifactId>
+           <version>${project.parent.version}</version>
+       </dependency>
+       <dependency>
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-liquibase</artifactId>
        </dependency>
@@ -85,12 +90,22 @@
        </dependency>
        <dependency>
            <groupId>${project.parent.groupId}</groupId>
+           <artifactId>task-management-system-presentation-spring-boot-controller-notification</artifactId>
+           <version>${project.parent.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>${project.parent.groupId}</groupId>
            <artifactId>task-management-system-presentation-spring-boot-controller-comment</artifactId>
            <version>${project.parent.version}</version>
        </dependency>
        <dependency>
            <groupId>${project.parent.groupId}</groupId>
            <artifactId>task-management-system-presentation-spring-boot-controller-task</artifactId>
+           <version>${project.parent.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>${project.parent.groupId}</groupId>
+          <artifactId>task-management-system-core-shared-socket-impl</artifactId>
            <version>${project.parent.version}</version>
        </dependency>
        <dependency>

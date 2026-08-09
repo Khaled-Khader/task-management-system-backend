@@ -7,3 +7,7 @@ databaseChangeLog:
       file: db/changelog/add-token-table.yaml
   - include:
       file: db/changelog/init-data.yaml
+  - include:
+      file: db/changelog/edit-ffor-delete.yaml
+  - include:
+      file: db/changelog/fix-delete.yaml

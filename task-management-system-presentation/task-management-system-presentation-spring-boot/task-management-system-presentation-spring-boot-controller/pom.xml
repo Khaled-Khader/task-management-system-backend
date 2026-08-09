@@ -16,6 +16,7 @@
         <module>task-management-system-presentation-spring-boot-controller-task</module>
         <module>task-management-system-presentation-spring-boot-controller-comment</module>
         <module>task-management-system-presentation-spring-boot-controller-activity-log</module>
+        <module>task-management-system-presentation-spring-boot-controller-notification</module>
     </modules>
 
     <dependencies>

@@ -1,6 +1,12 @@
 package com.globitel.task.management.system.core.user.usecase.main.admin;
 
+import com.globitel.task.management.system.core.notification.factory.NotificationUseCaseFactory;
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.notification.factory.domain.request.CreateNotificationRequest;
+import com.globitel.task.management.system.core.notification.factory.respose.NotificationResponse;
+import com.globitel.task.management.system.core.notification.identity.NotificationIdentity;
 import com.globitel.task.management.system.core.shared.exception.BadRequestException;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.user.dao.UserDao;
 import com.globitel.task.management.system.core.user.factory.request.EditUserDetailsRequest;
@@ -12,10 +18,15 @@ import jakarta.validation.Validator;
 public class EditUserDetailsUseCase extends ValidatorFunctionalUseCase<UserResponse, EditUserDetailsRequest> {
 
     private final UserDao userDao;
+    private final TMSWebSocket tmsWebSocket;
+    private final NotificationUseCaseFactoryDomain userNotificationUseCaseFactoryDomain;
 
-    public EditUserDetailsUseCase(Validator  validator, UserDao userDao) {
+
+    public EditUserDetailsUseCase(Validator  validator, UserDao userDao,TMSWebSocket tmsWebSocket,NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain) {
         super(validator);
         this.userDao = userDao;
+        this.tmsWebSocket = tmsWebSocket;
+        this.userNotificationUseCaseFactoryDomain = notificationUseCaseFactoryDomain;
     }
 
     @Override
@@ -41,6 +52,26 @@ public class EditUserDetailsUseCase extends ValidatorFunctionalUseCase<UserRespo
                 .update();
 
         UserIdentity  savedUser=userDao.save(updatedUser);
+
+        NotificationIdentity notificationIdentity=userNotificationUseCaseFactoryDomain
+                .createNotificationUseCase().execute(
+                        new CreateNotificationRequest(
+                                savedUser,
+                                "Your details has been updated by admin ",
+                                "Edit details occurs",
+                                "i have edit your details"
+                        )
+                );
+
+        tmsWebSocket.sendMessage(updatedUser.getUserName(),
+                new NotificationResponse(
+                        notificationIdentity.getUuid(),
+                        notificationIdentity.getTitle(),
+                        notificationIdentity.getMessage(),
+                        notificationIdentity.getAction(),
+                        notificationIdentity.getCreatedAt(),
+                        notificationIdentity.isRead()
+                ));
 
         return new UserResponse(
                 savedUser.getUuid(),

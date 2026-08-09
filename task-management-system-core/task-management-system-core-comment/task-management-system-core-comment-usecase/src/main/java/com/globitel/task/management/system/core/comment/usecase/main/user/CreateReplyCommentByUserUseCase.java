@@ -55,6 +55,7 @@ public class CreateReplyCommentByUserUseCase extends ValidatorFunctionalUseCase<
                 newComment.getUser().getName(),
                 newComment.getContent(),
                 newComment.getUser().getUserRole(),
+                newComment.getTask().getUuid(),
                 newComment.getReplayedComment().getUuid()
         );
     }

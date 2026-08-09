@@ -26,4 +26,8 @@ public interface TaskUseCaseFactory {
     ValidatorFunctionalUseCase<TaskResponse, EditTaskDetailsRequest> editTaskDetailsUseCase();
 
     ValidatorFunctionalUseCase<TaskDataResponse, ViewTaskDataRequest> viewTaskDataUseCase();
+
+    ValidatorFunctionalUseCase<TaskResponse, String>  findTaskByUuidUseCase();
+
+    ValidatorFunctionalUseCase<TaskDataResponse, ViewTaskDataRequest> viewTaskDataByAdminUseCase();
 }

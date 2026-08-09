@@ -52,6 +52,7 @@ public class CreateInitCommentByUserUseCase extends ValidatorFunctionalUseCase<C
                 newComment.getUser().getName(),
                 newComment.getContent(),
                 newComment.getUser().getUserRole(),
+                newComment.getTask().getUuid(),
                 null
         );
 

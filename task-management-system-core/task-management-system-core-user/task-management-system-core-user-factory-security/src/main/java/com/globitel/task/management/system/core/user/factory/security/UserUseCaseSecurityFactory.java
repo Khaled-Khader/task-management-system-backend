@@ -5,5 +5,6 @@ import com.globitel.task.management.system.core.user.factory.security.request.Lo
 import com.globitel.task.management.system.core.user.factory.security.response.LoginResponse;
 
 public interface UserUseCaseSecurityFactory {
+
     ValidatorFunctionalUseCase<LoginResponse, LoginRequest> loginUseCase();
 }

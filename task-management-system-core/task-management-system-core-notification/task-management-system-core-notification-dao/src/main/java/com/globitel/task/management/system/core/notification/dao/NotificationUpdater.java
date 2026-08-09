@@ -5,8 +5,5 @@ import com.globitel.task.management.system.core.shared.dao.Updater;
 
 public interface NotificationUpdater extends Updater<NotificationIdentity> {
 
-    @Override
-    default NotificationIdentity update(){
-        throw new UnsupportedOperationException("NotificationUpdater Not supported yet.");
-    }
+    NotificationUpdater isRead(boolean isRead);
 }

@@ -43,6 +43,12 @@ public class CommentJpa implements CommentDao {
     }
 
     @Override
+    public void deleteByTask(TaskIdentity task) {
+        commentRepository.deleteRepliesByTask((TaskEntity) task);
+        commentRepository.deleteParentCommentsByTask((TaskEntity)task);
+    }
+
+    @Override
     public List<CommentIdentity> findCommentsByTaskIdentity(TaskIdentity taskIdentity) {
         return List.copyOf(commentRepository.findByTask((TaskEntity) taskIdentity));
     }

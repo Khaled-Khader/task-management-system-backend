@@ -2,7 +2,9 @@ package com.globitel.task.management.system.core.task.port;
 
 
 import com.globitel.task.management.system.core.comment.factory.domain.CommentUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.task.dao.TaskDao;
 import com.globitel.task.management.system.core.task.factory.TaskUseCaseFactory;
 import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
@@ -28,8 +30,8 @@ public class TaskConfiguration {
     }
 
     @Bean
-    public TaskUseCaseFactory taskUseCaseFactory(Validator validator, TaskDao  taskDao, UserUseCaseFactoryDomain  userUseCaseFactoryDomain, TMSSecurityContext tmsSecurityContext, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain) {
-        return new TaskUseCaseFactoryImpl(validator, taskDao,userUseCaseFactoryDomain, tmsSecurityContext,commentUseCaseFactoryDomain);
+    public TaskUseCaseFactory taskUseCaseFactory(Validator validator, TaskDao  taskDao, UserUseCaseFactoryDomain  userUseCaseFactoryDomain, TMSSecurityContext tmsSecurityContext, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TMSWebSocket tmsWebSocket) {
+        return new TaskUseCaseFactoryImpl(validator, taskDao,userUseCaseFactoryDomain, tmsSecurityContext,commentUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tmsWebSocket);
     }
 
     @Bean

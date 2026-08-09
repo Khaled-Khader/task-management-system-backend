@@ -14,10 +14,12 @@ public class FindAllActivityLogUseCase extends ValidatorSupplierUseCase<List<Act
 
     @Override
     protected List<ActivityLogResponse> doExecute() {
-        return activityLogDao.findAll().stream()
+        return activityLogDao.findAllActivityLogByOrderCreatedAtDesc().stream()
                 .map(activityLogIdentity -> new ActivityLogResponse(
                         activityLogIdentity.getUuid(),
-                        activityLogIdentity.getAction()
+                        activityLogIdentity.getAction(),
+                        activityLogIdentity.getCreatedAt(),
+                        activityLogIdentity.getUser().getUserName()
                 )).toList();
     }
 }

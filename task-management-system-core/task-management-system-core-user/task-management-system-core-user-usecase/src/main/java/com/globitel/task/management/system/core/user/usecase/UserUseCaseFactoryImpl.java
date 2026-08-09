@@ -1,6 +1,8 @@
 package com.globitel.task.management.system.core.user.usecase;
 
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorSupplierUseCase;
 import com.globitel.task.management.system.core.user.dao.UserDao;
@@ -31,14 +33,14 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
     private final GetCurrentUserUseCase getCurrentUserUseCase;
     private final FindUserByIdUseCase findUserByIdUseCase;
 
-    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext) {
+    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain) {
         this.createUserUseCase = new CreateUserUseCase(validator, userDao, tmsPasswordEncoder);
         this.findAllUsersUseCase = new FindAllUsersUseCase(userDao);
         this.deleteUserByUserNameUseCase = new DeleteUserByUserNameUseCase(validator, userDao);
         this.findAllUsersByUserRoleUseCase = new FindAllUsersByRoleUseCase(validator, userDao);
         this.findAllUsersByUserStatusUseCase = new FindAllUsersByStatusUseCase(validator, userDao);
         this.findAllUsersByNameUseCase = new FindAllUsersByNameUseCase(validator, userDao);
-        this.editUserDetailsUseCase = new EditUserDetailsUseCase(validator, userDao);
+        this.editUserDetailsUseCase = new EditUserDetailsUseCase(validator, userDao, tmsWebSocket,notificationUseCaseFactoryDomain);
         this.findUserNameByUserUuidUseCase = new FindUserNameByUserUuidUseCase(validator, userDao);
         this.findUserByUserNameForSecurityUseCase = new FindUserByUserNameForSecurityUseCase(validator, userDao);
         this.viewUserDataUseCase = new ViewUserDataUseCase(userDao, tMSSecurityContext);

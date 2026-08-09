@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1786291424828-2
+      author: khaled
+      changes:
+
+        - dropForeignKeyConstraint:
+            baseTableName: comments
+            constraintName: FKp3jagbh7twoyj2hv1xjvkv51l
+
+        - addForeignKeyConstraint:
+            baseTableName: comments
+            baseColumnNames: replayed_comment_uuid
+            referencedTableName: comments
+            referencedColumnNames: uuid
+            constraintName: fk_comments_parent
+            onDelete: CASCADE
+            onUpdate: CASCADE

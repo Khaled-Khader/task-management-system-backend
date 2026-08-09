@@ -110,14 +110,14 @@ public class UserController {
     }
 
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER','ADMIN')")
     @GetMapping("data")
     public ViewUserDataResponse viewUserData() {
         return userUseCaseFactory.viewUserDataUseCase().execute();
     }
 
     @ActivityLog("EDIT USER DATA")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER','ADMIN')")
     @PostMapping("edit/data")
     public UserUpdatedResponse  editUserData(@RequestBody EditDataForUserRequest editDataForUserRequest) {
         return userUseCaseFactory.editUserDataForUserUseCase().execute(editDataForUserRequest);

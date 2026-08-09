@@ -19,6 +19,8 @@
         <module>task-management-system-core-shared-usecase</module>
         <module>task-management-system-core-shared-security-context</module>
         <module>task-management-system-core-shared-security-context-impl</module>
+        <module>task-management-system-core-shared-socket</module>
+        <module>task-management-system-core-shared-socket-impl</module>
     </modules>
 
 

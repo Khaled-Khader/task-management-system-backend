@@ -1,7 +1,9 @@
 package com.globitel.task.management.system.core.task.usecase;
 
 import com.globitel.task.management.system.core.comment.factory.domain.CommentUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorSupplierUseCase;
 import com.globitel.task.management.system.core.task.dao.TaskDao;
@@ -29,15 +31,20 @@ public class TaskUseCaseFactoryImpl implements TaskUseCaseFactory {
     private final FindTasksForUserUseCase findTasksForUserUseCase;
     private final UpdateStatusTaskForUserUseCase updateStatusTaskForUserUseCase;
     private final ViewTaskDataByUserUseCase viewTaskDataByUserUseCase;
-    public TaskUseCaseFactoryImpl(Validator validator, TaskDao taskDao, UserUseCaseFactoryDomain userUseCaseFactoryDomain, TMSSecurityContext tmSecurityContext, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain) {
+    private final FindTaskByUuidUseCase  findTaskByUuidUseCase;
+    private final ViewTaskDataByAdminUseCase viewTaskDataByAdminUseCase;
+
+    public TaskUseCaseFactoryImpl(Validator validator, TaskDao taskDao, UserUseCaseFactoryDomain userUseCaseFactoryDomain, TMSSecurityContext tmSecurityContext, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TMSWebSocket tmsWebSocket) {
         this.createTaskUseCase = new CreateTaskUseCase(validator, taskDao, userUseCaseFactoryDomain);
         this.findAllTasksUseCase = new FindAllTasksUseCase(taskDao);
-        this.deleteTaskUseCase = new DeleteTaskUseCase(validator, taskDao);
-        this.assignTaskToUserUseCase = new AssignTaskToUserUseCase(validator, userUseCaseFactoryDomain, taskDao);
-        this.editTaskDetailsUseCase = new EditTaskDetailsUseCase(validator, taskDao);
+        this.deleteTaskUseCase = new DeleteTaskUseCase(validator, taskDao,commentUseCaseFactoryDomain);
+        this.assignTaskToUserUseCase = new AssignTaskToUserUseCase(validator, userUseCaseFactoryDomain, taskDao,notificationUseCaseFactoryDomain,tmsWebSocket);
+        this.editTaskDetailsUseCase = new EditTaskDetailsUseCase(validator, taskDao,notificationUseCaseFactoryDomain,tmsWebSocket);
         this.findTasksForUserUseCase = new FindTasksForUserUseCase(taskDao, tmSecurityContext, userUseCaseFactoryDomain);
         this.updateStatusTaskForUserUseCase = new UpdateStatusTaskForUserUseCase(validator, taskDao, tmSecurityContext, userUseCaseFactoryDomain);
         this.viewTaskDataByUserUseCase=new ViewTaskDataByUserUseCase(validator,taskDao,commentUseCaseFactoryDomain,tmSecurityContext);
+        this.findTaskByUuidUseCase =new FindTaskByUuidUseCase(validator,taskDao);
+        this.viewTaskDataByAdminUseCase =new ViewTaskDataByAdminUseCase(validator,taskDao,commentUseCaseFactoryDomain);
     }
 
     @Override
@@ -78,5 +85,15 @@ public class TaskUseCaseFactoryImpl implements TaskUseCaseFactory {
     @Override
     public ValidatorFunctionalUseCase<TaskDataResponse, ViewTaskDataRequest> viewTaskDataUseCase() {
         return viewTaskDataByUserUseCase;
+    }
+
+    @Override
+    public ValidatorFunctionalUseCase<TaskResponse, String> findTaskByUuidUseCase() {
+        return findTaskByUuidUseCase;
+    }
+
+    @Override
+    public ValidatorFunctionalUseCase<TaskDataResponse, ViewTaskDataRequest> viewTaskDataByAdminUseCase() {
+        return viewTaskDataByAdminUseCase;
     }
 }

@@ -9,7 +9,9 @@ import com.globitel.task.management.system.core.comment.usecase.main.admin.Creat
 import com.globitel.task.management.system.core.comment.usecase.main.admin.CreateReplyCommentByAdminUseCase;
 import com.globitel.task.management.system.core.comment.usecase.main.user.CreateInitCommentByUserUseCase;
 import com.globitel.task.management.system.core.comment.usecase.main.user.CreateReplyCommentByUserUseCase;
+import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
+import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.user.factory.domain.UserUseCaseFactoryDomain;
@@ -21,9 +23,9 @@ public class CommentUseCaseFactoryImpl implements CommentUseCaseFactory {
     private final CreateReplyCommentByAdminUseCase  createReplyCommentByAdminUseCase;
     private final CreateInitCommentByUserUseCase  createInitCommentByUserUseCase;
     private final CreateReplyCommentByUserUseCase createReplyCommentByUserUseCase;
-    public CommentUseCaseFactoryImpl(CommentDao  commentDao, Validator validator, TMSSecurityContext tmsSecurityContext, UserUseCaseFactoryDomain userUseCaseFactoryDomain, TaskUseCaseFactoryDomain  taskUseCaseFactoryDomain) {
-        this.createInitCommentByAdminUseCase =new CreateInitCommentByAdminUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain);
-        this.createReplyCommentByAdminUseCase=new CreateReplyCommentByAdminUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain);
+    public CommentUseCaseFactoryImpl(CommentDao  commentDao, Validator validator, TMSSecurityContext tmsSecurityContext, UserUseCaseFactoryDomain userUseCaseFactoryDomain, TaskUseCaseFactoryDomain  taskUseCaseFactoryDomain, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TMSWebSocket tmsWebSocket) {
+        this.createInitCommentByAdminUseCase =new CreateInitCommentByAdminUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tmsWebSocket);
+        this.createReplyCommentByAdminUseCase=new CreateReplyCommentByAdminUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tmsWebSocket);
         this.createInitCommentByUserUseCase=new CreateInitCommentByUserUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain);
         this.createReplyCommentByUserUseCase=new CreateReplyCommentByUserUseCase(validator,tmsSecurityContext,commentDao,taskUseCaseFactoryDomain,userUseCaseFactoryDomain);
     }

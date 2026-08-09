@@ -39,4 +39,9 @@ public class ActivityLogJpa implements ActivityLogDao {
     public ActivityLogUpdater updater(ActivityLogIdentity entity) {
         return null;
     }
+
+    @Override
+    public List<ActivityLogIdentity> findAllActivityLogByOrderCreatedAtDesc() {
+        return List.copyOf(activityLogRepository.findAllByOrderByCreatedAtDesc());
+    }
 }
