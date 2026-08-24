@@ -7,6 +7,8 @@ import com.globitel.task.management.system.core.comment.entity.CommentEntity;
 import com.globitel.task.management.system.core.comment.identity.CommentIdentity;
 import com.globitel.task.management.system.core.task.entity.TaskEntity;
 import com.globitel.task.management.system.core.task.identity.TaskIdentity;
+import com.globitel.task.management.system.core.user.entity.UserEntity;
+import com.globitel.task.management.system.core.user.identity.UserIdentity;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -43,13 +45,27 @@ public class CommentJpa implements CommentDao {
     }
 
     @Override
-    public void deleteByTask(TaskIdentity task) {
-        commentRepository.deleteRepliesByTask((TaskEntity) task);
-        commentRepository.deleteParentCommentsByTask((TaskEntity)task);
+    public void makeReplayedNullByTask(TaskIdentity task) {
+        commentRepository.makeReplayedNullByTask((TaskEntity) task);
+    }
+
+    @Override
+    public int deleteByTask(TaskIdentity task) {
+        return commentRepository.deleteByTask((TaskEntity) task);
     }
 
     @Override
     public List<CommentIdentity> findCommentsByTaskIdentity(TaskIdentity taskIdentity) {
         return List.copyOf(commentRepository.findByTask((TaskEntity) taskIdentity));
+    }
+
+    @Override
+    public void makeReplayedNullByUser(UserIdentity userEntity) {
+            commentRepository.makeReplayedNullByUser((UserEntity)userEntity);
+    }
+
+    @Override
+    public int deleteByUser(UserIdentity userEntity) {
+        return commentRepository.deleteByUser((UserEntity) userEntity);
     }
 }

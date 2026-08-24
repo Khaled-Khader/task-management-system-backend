@@ -11,3 +11,5 @@ databaseChangeLog:
       file: db/changelog/edit-ffor-delete.yaml
   - include:
       file: db/changelog/fix-delete.yaml
+  - include:
+      file: db/changelog/edit-comments-cascade.yaml

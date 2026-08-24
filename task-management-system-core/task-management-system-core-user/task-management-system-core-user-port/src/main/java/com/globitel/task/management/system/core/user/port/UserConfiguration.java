@@ -1,14 +1,16 @@
 package com.globitel.task.management.system.core.user.port;
 
+import com.globitel.task.management.system.core.activitylog.factory.domain.ActivityLogUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.comment.factory.domain.CommentUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
 import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
+import com.globitel.task.management.system.core.shared.technologies.TransactionExecutor;
+import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.token.factory.domain.TokenUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.user.dao.UserDao;
 import com.globitel.task.management.system.core.user.factory.UserUseCaseFactory;
 import com.globitel.task.management.system.core.user.factory.domain.UserUseCaseFactoryDomain;
-import com.globitel.task.management.system.core.user.factory.security.UserUseCaseSecurityFactory;
-import com.globitel.task.management.system.core.user.factory.socket.UserUseCaseSocketFactory;
 import com.globitel.task.management.system.core.user.function.TMSAuthenticator;
 import com.globitel.task.management.system.core.user.function.TMSPasswordEncoder;
 import com.globitel.task.management.system.core.user.function.impl.PasswordEncoderImpl;
@@ -17,8 +19,6 @@ import com.globitel.task.management.system.core.user.jpa.UserJpa;
 import com.globitel.task.management.system.core.user.jpa.UserRepository;
 import com.globitel.task.management.system.core.user.usecase.UserUseCaseFactoryDomainImpl;
 import com.globitel.task.management.system.core.user.usecase.UserUseCaseFactoryImpl;
-import com.globitel.task.management.system.core.user.usecase.UserUseCaseSecurityFactoryImpl;
-import com.globitel.task.management.system.core.user.usecase.UserUseCaseSocketFactoryImpl;
 import jakarta.validation.Validator;
 import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -49,8 +49,8 @@ public class UserConfiguration {
     }
 
     @Bean
-    public UserUseCaseFactory  userUseCaseFactory(UserDao userDao, Validator validator, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain) {
-        return new UserUseCaseFactoryImpl(validator,userDao,tmsPasswordEncoder,tMSSecurityContext,tmsWebSocket,notificationUseCaseFactoryDomain);
+    public UserUseCaseFactory  userUseCaseFactory(UserDao userDao, Validator validator, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor) {
+        return new UserUseCaseFactoryImpl(validator,userDao,tmsPasswordEncoder,tMSSecurityContext,tmsWebSocket,notificationUseCaseFactoryDomain,taskUseCaseFactoryDomain,commentUseCaseFactoryDomain,tokenUseCaseFactoryDomain,activityLogUseCaseFactoryDomain,transactionExecutor);
     }
 
     @Bean
@@ -64,13 +64,4 @@ public class UserConfiguration {
 
     }
 
-    @Bean
-    public UserUseCaseSecurityFactory userUseCaseSecurityFactory(Validator validator, TMSAuthenticator tmsAuthenticator,UserDao userDao, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain) {
-        return new UserUseCaseSecurityFactoryImpl(validator, tmsAuthenticator, userDao, tokenUseCaseFactoryDomain);
-    }
-
-    @Bean
-    public UserUseCaseSocketFactory userUseCaseSocketFactory(UserDao userDao,Validator validator ) {
-        return new UserUseCaseSocketFactoryImpl(validator,userDao);
-    }
 }

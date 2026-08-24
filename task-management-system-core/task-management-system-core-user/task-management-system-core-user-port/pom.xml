@@ -39,11 +39,6 @@
             <artifactId>task-management-system-core-user-function-impl</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.parent.groupId}</groupId>
-            <artifactId>task-management-system-core-user-factory-socket</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
     </dependencies>
 
 </project>

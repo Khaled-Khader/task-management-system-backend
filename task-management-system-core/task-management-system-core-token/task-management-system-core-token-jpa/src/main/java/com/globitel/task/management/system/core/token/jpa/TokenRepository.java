@@ -45,4 +45,7 @@ where t.user=:user
         """
 )
     void denyAllTokensForUser(@Param("user") UserEntity userEntity);
+
+
+    int deleteByUser(UserEntity user);
 }

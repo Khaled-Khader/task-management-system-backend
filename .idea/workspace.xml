@@ -3,97 +3,96 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackgroundAgentGlobalSettings">
+    <option name="selectedModelId" value="auto" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="60adedc0-c904-40fb-9a42-4ffb6889e001" name="Changes" comment="feat: complete back except notification">
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/domain/DeleteCommentsByTaskUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory-domain/src/main/java/com/globitel/task/management/system/core/notification/factory/domain/NotificationUseCaseFactoryDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory-domain/src/main/java/com/globitel/task/management/system/core/notification/factory/domain/request/CreateNotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory/src/main/java/com/globitel/task/management/system/core/notification/factory/NotificationUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory/src/main/java/com/globitel/task/management/system/core/notification/factory/respose/NotificationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationCreatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationUpdaterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/NotificationUseCaseFactoryDomainImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/NotificationUseCaseFactoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/domain/CreateNotificationUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/error/NotificationError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/main/FindAllUserNotificationUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/main/MarkAllAsReadUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/main/MarkNotificationAsReadUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket-impl/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket-impl/src/main/java/com/globitel/task/management/system/core/shared/socket/impl/TMSWebSocketConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket-impl/src/main/java/com/globitel/task/management/system/core/shared/socket/impl/TMSWebSocketImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket-impl/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket/src/main/java/com/globitel/task/management/system/core/shared/socket/TMSWebSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/FindTaskByUuidUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/ViewTaskDataByAdminUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-socket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-socket/src/main/java/com/globitel/task/management/system/core/user/factory/socket/UserUseCaseSocketFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseSocketFactoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-notification/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-notification/src/main/java/com/globitel/task/management/system/presentation/spring/boot/controller/notification/NotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-notification/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/edit-ffor-delete.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/fix-delete.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/src/main/java/com/globitel/task/management/system/presentation/spring/boot/web/socket/TMSWebSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/src/main/java/com/globitel/task/management/system/presentation/spring/boot/web/socket/WebSocketConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+    <list default="true" id="60adedc0-c904-40fb-9a42-4ffb6889e001" name="Changes" comment="feat: finish backend">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/diff-generator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory-domain/src/main/java/com/globitel/task/management/system/core/activitylog/factory/domain/ActivityLogUseCaseFactoryDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/src/main/java/com/globitel/task/management/system/core/activitylog/usecase/ActivityLogUseCaseFactoryDomainImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/src/main/java/com/globitel/task/management/system/core/activitylog/usecase/domain/DeleteActivityLogByUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/domain/DeleteCommentsByUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/domain/DeleteNotificationByUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/java/com/globitel/task/management/system/core/shared/technologies/impl/SpringTransactionExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/java/com/globitel/task/management/system/core/shared/technologies/impl/TechnologiesConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies/src/main/java/com/globitel/task/management/system/core/shared/technologies/TransactionExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/domain/MakeUserTaskNullUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-usecase/src/main/java/com/globitel/task/management/system/core/token/usecase/domain/DeleteTokenByUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/src/main/java/com/globitel/task/management/system/core/user/factory/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/ReturnUserDataAfterAuthenticatedUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/edit-comments-cascade.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-security/src/main/java/com/globitel/task/management/system/presentation/spring/boot/security/TMSSpringAuthenticator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_7_2026_4_21_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_7_2026_4_21_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-dao/src/main/java/com/globitel/task/management/system/core/activitylog/dao/ActivityLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-dao/src/main/java/com/globitel/task/management/system/core/activitylog/dao/ActivityLogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory/src/main/java/com/globitel/task/management/system/core/activitylog/factory/response/ActivityLogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory/src/main/java/com/globitel/task/management/system/core/activitylog/factory/response/ActivityLogResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-jpa/src/main/java/com/globitel/task/management/system/core/activitylog/jpa/ActivityLogJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-jpa/src/main/java/com/globitel/task/management/system/core/activitylog/jpa/ActivityLogJpa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-jpa/src/main/java/com/globitel/task/management/system/core/activitylog/jpa/ActivityLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-jpa/src/main/java/com/globitel/task/management/system/core/activitylog/jpa/ActivityLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/src/main/java/com/globitel/task/management/system/core/activitylog/usecase/main/FindAllActivityLogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/src/main/java/com/globitel/task/management/system/core/activitylog/usecase/main/FindAllActivityLogUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-port/src/main/java/com/globitel/task/management/system/core/activitylog/port/ActivityLogConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-port/src/main/java/com/globitel/task/management/system/core/activitylog/port/ActivityLogConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-usecase/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-dao/src/main/java/com/globitel/task/management/system/core/comment/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-dao/src/main/java/com/globitel/task/management/system/core/comment/dao/CommentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-factory-domain/src/main/java/com/globitel/task/management/system/core/comment/factory/domain/CommentUseCaseFactoryDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-factory-domain/src/main/java/com/globitel/task/management/system/core/comment/factory/domain/CommentUseCaseFactoryDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-factory/src/main/java/com/globitel/task/management/system/core/comment/factory/response/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-factory/src/main/java/com/globitel/task/management/system/core/comment/factory/response/CommentResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-jpa/src/main/java/com/globitel/task/management/system/core/comment/jpa/CommentJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-jpa/src/main/java/com/globitel/task/management/system/core/comment/jpa/CommentJpa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-jpa/src/main/java/com/globitel/task/management/system/core/comment/jpa/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-jpa/src/main/java/com/globitel/task/management/system/core/comment/jpa/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-port/src/main/java/com/globitel/task/management/system/core/comment/port/CommentConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-port/src/main/java/com/globitel/task/management/system/core/comment/port/CommentConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/CommentUseCaseFactoryDomainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/CommentUseCaseFactoryDomainImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/CommentUseCaseFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/CommentUseCaseFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/admin/CreateInitCommentByAdminUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/admin/CreateInitCommentByAdminUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/admin/CreateReplyCommentByAdminUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/admin/CreateReplyCommentByAdminUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/user/CreateInitCommentByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/user/CreateInitCommentByUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/user/CreateReplyCommentByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/main/user/CreateReplyCommentByUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/domain/DeleteCommentsByTaskUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-comment/task-management-system-core-comment-usecase/src/main/java/com/globitel/task/management/system/core/comment/usecase/domain/DeleteCommentsByTaskUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-dao/src/main/java/com/globitel/task/management/system/core/notification/dao/NotificationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-dao/src/main/java/com/globitel/task/management/system/core/notification/dao/NotificationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-dao/src/main/java/com/globitel/task/management/system/core/notification/dao/NotificationUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-dao/src/main/java/com/globitel/task/management/system/core/notification/dao/NotificationUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-port/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-port/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-port/src/main/java/com/globitel/task/management/system/core/notification/port/NotificationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-port/src/main/java/com/globitel/task/management/system/core/notification/port/NotificationConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory-domain/src/main/java/com/globitel/task/management/system/core/notification/factory/domain/NotificationUseCaseFactoryDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-factory-domain/src/main/java/com/globitel/task/management/system/core/notification/factory/domain/NotificationUseCaseFactoryDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-jpa/src/main/java/com/globitel/task/management/system/core/notification/jpa/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/NotificationUseCaseFactoryDomainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-notification/task-management-system-core-notification-usecase/src/main/java/com/globitel/task/management/system/core/notification/usecase/NotificationUseCaseFactoryDomainImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory/src/main/java/com/globitel/task/management/system/core/task/factory/TaskUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory/src/main/java/com/globitel/task/management/system/core/task/factory/TaskUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-port/src/main/java/com/globitel/task/management/system/core/task/port/TaskConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-port/src/main/java/com/globitel/task/management/system/core/task/port/TaskConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-dao/src/main/java/com/globitel/task/management/system/core/task/dao/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-dao/src/main/java/com/globitel/task/management/system/core/task/dao/TaskDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory-domain/src/main/java/com/globitel/task/management/system/core/task/factory/domain/TaskUseCaseFactoryDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory-domain/src/main/java/com/globitel/task/management/system/core/task/factory/domain/TaskUseCaseFactoryDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory/src/main/java/com/globitel/task/management/system/core/task/factory/response/DeleteTaskResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-factory/src/main/java/com/globitel/task/management/system/core/task/factory/response/DeleteTaskResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-jpa/src/main/java/com/globitel/task/management/system/core/task/jpa/TaskJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-jpa/src/main/java/com/globitel/task/management/system/core/task/jpa/TaskJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-jpa/src/main/java/com/globitel/task/management/system/core/task/jpa/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-jpa/src/main/java/com/globitel/task/management/system/core/task/jpa/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/TaskUseCaseFactoryDomainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/TaskUseCaseFactoryDomainImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/TaskUseCaseFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/TaskUseCaseFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/AssignTaskToUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/AssignTaskToUserUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/DeleteTaskUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/DeleteTaskUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/EditTaskDetailsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/EditTaskDetailsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/FindAllTasksUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/FindAllTasksUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/FindTaskByUuidUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/FindTaskByUuidUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/ViewTaskDataByAdminUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/admin/ViewTaskDataByAdminUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/user/FindTasksForUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/user/FindTasksForUserUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/user/ViewTaskDataByUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/task-management-system-core-task-usecase/src/main/java/com/globitel/task/management/system/core/task/usecase/main/user/ViewTaskDataByUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-dao/src/main/java/com/globitel/task/management/system/core/token/dao/TokenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-dao/src/main/java/com/globitel/task/management/system/core/token/dao/TokenDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-factory-domain/src/main/java/com/globitel/task/management/system/core/token/factory/domain/TokenUseCaseFactoryDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-factory-domain/src/main/java/com/globitel/task/management/system/core/token/factory/domain/TokenUseCaseFactoryDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-jpa/src/main/java/com/globitel/task/management/system/core/token/jpa/TokenJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-jpa/src/main/java/com/globitel/task/management/system/core/token/jpa/TokenJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-jpa/src/main/java/com/globitel/task/management/system/core/token/jpa/TokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-jpa/src/main/java/com/globitel/task/management/system/core/token/jpa/TokenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-usecase/src/main/java/com/globitel/task/management/system/core/token/usecase/TokenUseCaseFactoryDomainImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-token/task-management-system-core-token-usecase/src/main/java/com/globitel/task/management/system/core/token/usecase/TokenUseCaseFactoryDomainImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/src/main/java/com/globitel/task/management/system/core/user/factory/security/UserUseCaseSecurityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/src/main/java/com/globitel/task/management/system/core/user/factory/security/UserUseCaseSecurityFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/src/main/java/com/globitel/task/management/system/core/user/factory/security/UserUseCaseSecurityFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/src/main/java/com/globitel/task/management/system/core/user/factory/security/request/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-security/src/main/java/com/globitel/task/management/system/core/user/factory/security/response/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-socket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory-socket/src/main/java/com/globitel/task/management/system/core/user/factory/socket/UserUseCaseSocketFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/src/main/java/com/globitel/task/management/system/core/user/factory/UserUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/src/main/java/com/globitel/task/management/system/core/user/factory/UserUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/src/main/java/com/globitel/task/management/system/core/user/factory/response/DeleteUserByUserNameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-factory/src/main/java/com/globitel/task/management/system/core/user/factory/response/DeleteUserByUserNameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-jpa/src/main/java/com/globitel/task/management/system/core/user/jpa/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-jpa/src/main/java/com/globitel/task/management/system/core/user/jpa/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-port/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-port/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-port/src/main/java/com/globitel/task/management/system/core/user/port/UserConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-port/src/main/java/com/globitel/task/management/system/core/user/port/UserConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseSecurityFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseSecurityFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/admin/EditUserDetailsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/admin/EditUserDetailsUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-task/src/main/java/com/globitel/task/management/system/presentation/spring/boot/controller/task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-task/src/main/java/com/globitel/task/management/system/presentation/spring/boot/controller/task/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseSecurityFactoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/UserUseCaseSocketFactoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/LoginUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/admin/DeleteUserByUserNameUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-core/task-management-system-core-user/task-management-system-core-user-usecase/src/main/java/com/globitel/task/management/system/core/user/usecase/main/admin/DeleteUserByUserNameUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-user/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-user/src/main/java/com/globitel/task/management/system/presentation/spring/boot/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-controller/task-management-system-presentation-spring-boot-controller-user/src/main/java/com/globitel/task/management/system/presentation/spring/boot/controller/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-security/src/main/java/com/globitel/task/management/system/presentation/spring/boot/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-security/src/main/java/com/globitel/task/management/system/presentation/spring/boot/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,17 +106,17 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="341" />
+    <option name="cachedIndexableFilesCount" value="361" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Record" />
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Liquibase Changelog" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -145,71 +144,75 @@
     <setting file="jar://$USER_HOME$/.jdks/temurin-21.0.11/lib/src.zip!/java.base/java/util/List.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/7.0.5/spring-security-core-7.0.5-sources.jar!/org/springframework/security/core/userdetails/UserDetails.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.1266194585930958E-20" />
-      <entry key="MS500" value="1.1628881812059778E-4" />
-      <entry key="S2" value="0.1038447366187192" />
-      <entry key="S5" value="0.40416043440278354" />
-      <entry key="S10" value="0.6357361400313969" />
-      <entry key="S30" value="0.8623995896633267" />
-      <entry key="S60" value="0.9985506822627297" />
-      <entry key="M2" value="1.3423664664253312" />
-      <entry key="M5" value="2.3275527434617262" />
-      <entry key="M10" value="4.690946257084242" />
-      <entry key="M15" value="8.256411154126003" />
-      <entry key="M30" value="24.323872314008295" />
-      <entry key="H1" value="63.9812168526919" />
-      <entry key="H2" value="142.09049024621697" />
-      <entry key="H4" value="279.1943592750581" />
-      <entry key="D1" value="1318.5710992609004" />
-      <entry key="W1" value="2487.2095297318647" />
+      <entry key="MS100" value="4.383821418098022E-53" />
+      <entry key="MS500" value="3.375752318339376E-11" />
+      <entry key="S2" value="0.0024494960433043347" />
+      <entry key="S5" value="0.11585707318457895" />
+      <entry key="S10" value="0.531092120565498" />
+      <entry key="S30" value="1.9567686131531068" />
+      <entry key="S60" value="3.5674759939523706" />
+      <entry key="M2" value="6.189652132696894" />
+      <entry key="M5" value="12.827845808483175" />
+      <entry key="M10" value="22.016700759458185" />
+      <entry key="M15" value="29.68766785240377" />
+      <entry key="M30" value="51.07860285948191" />
+      <entry key="H1" value="91.2634615833495" />
+      <entry key="H2" value="163.54009112779093" />
+      <entry key="H4" value="301.69893789162495" />
+      <entry key="D1" value="1398.1784438869495" />
+      <entry key="W1" value="2747.936360422986" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000141198615" />
-      <entry key="S30" value="1.00682014551871" />
-      <entry key="S60" value="1.1863992526746827" />
-      <entry key="M2" value="2.047311161928803" />
-      <entry key="M5" value="4.372073971262873" />
-      <entry key="M10" value="7.19400322341173" />
-      <entry key="M15" value="11.198128470958043" />
-      <entry key="M30" value="31.028676044673308" />
-      <entry key="H1" value="82.91761758054926" />
-      <entry key="H2" value="184.6517410750175" />
-      <entry key="H4" value="358.34713325652496" />
-      <entry key="D1" value="1647.4065009882452" />
-      <entry key="W1" value="3069.697107854768" />
+      <entry key="MS100" value="1.0000000608570654" />
+      <entry key="MS500" value="1.0367916857264332" />
+      <entry key="S2" value="1.620323297094469" />
+      <entry key="S5" value="2.579581658859616" />
+      <entry key="S10" value="3.5989139559279817" />
+      <entry key="S30" value="5.542449448818527" />
+      <entry key="S60" value="8.237532979383072" />
+      <entry key="M2" value="13.812381365226273" />
+      <entry key="M5" value="26.331863781984413" />
+      <entry key="M10" value="38.837176281055584" />
+      <entry key="M15" value="48.22482349901881" />
+      <entry key="M30" value="76.62316591831643" />
+      <entry key="H1" value="132.62802062879257" />
+      <entry key="H2" value="230.0979676296932" />
+      <entry key="H4" value="409.86042879399133" />
+      <entry key="D1" value="1782.1870390073075" />
+      <entry key="W1" value="3432.9354016581156" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.047682004154327E-4" />
-      <entry key="MS500" value="0.1981727563624536" />
-      <entry key="S2" value="0.7704536840448487" />
-      <entry key="S5" value="1.2538867344361493" />
-      <entry key="S10" value="1.557350487383364" />
-      <entry key="S30" value="1.8421180638332828" />
-      <entry key="S60" value="2.1686849489269115" />
-      <entry key="M2" value="3.3753551072461874" />
-      <entry key="M5" value="6.687347279672128" />
-      <entry key="M10" value="11.874098883024095" />
-      <entry key="M15" value="19.44208037850206" />
-      <entry key="M30" value="55.33201638553463" />
-      <entry key="H1" value="146.86659048534625" />
-      <entry key="H2" value="326.69944702478745" />
-      <entry key="H4" value="637.4953547943118" />
-      <entry key="D1" value="2965.941592817118" />
-      <entry key="W1" value="5556.897193806259" />
+      <entry key="MS100" value="0.0025066912069214276" />
+      <entry key="MS500" value="0.3059285149102652" />
+      <entry key="S2" value="1.1363928478660428" />
+      <entry key="S5" value="2.3345096953818096" />
+      <entry key="S10" value="3.8570289373422963" />
+      <entry key="S30" value="7.3123468074426645" />
+      <entry key="S60" value="11.623970183302953" />
+      <entry key="M2" value="19.837393142275655" />
+      <entry key="M5" value="39.03622712969817" />
+      <entry key="M10" value="60.76371630899582" />
+      <entry key="M15" value="77.83833619944042" />
+      <entry key="M30" value="127.64386717686222" />
+      <entry key="H1" value="223.8409498072279" />
+      <entry key="H2" value="393.5915681980365" />
+      <entry key="H4" value="711.5136394624866" />
+      <entry key="D1" value="3180.3279182166757" />
+      <entry key="W1" value="6180.8613789937535" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
@@ -222,7 +225,7 @@
         <option name="modeId" value="Agent" />
         <option name="model">
           <model>
-            <option name="modelType" value="builtin_family" />
+            <option name="modelType" value="builtin_id" />
             <option name="modelValue" value="auto" />
           </model>
         </option>
@@ -244,11 +247,12 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pc/Desktop/task-management-system/task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-web-socket/src/main/resources/META-INF/spring&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pc/Desktop/task-management-system/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/resources/META-INF/spring&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -258,17 +262,22 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pc\Desktop\task-management-system\task-management-system-core\task-management-system-core-shared\task-management-system-core-shared-technologies-impl\src\main\resources\META-INF\spring" />
       <recent name="C:\Users\Pc\Desktop\task-management-system\task-management-system-presentation\task-management-system-presentation-spring-boot\task-management-system-presentation-spring-boot-web-socket\src\main\resources\META-INF\spring" />
       <recent name="C:\Users\Pc\Desktop\task-management-system\task-management-system-core\task-management-system-core-shared\task-management-system-core-shared-socket-impl\src\main\resources\META-INF\spring" />
       <recent name="C:\Users\Pc\Desktop\task-management-system\task-management-system-presentation\task-management-system-presentation-spring-boot\task-management-system-presentation-spring-boot-controller\task-management-system-presentation-spring-boot-controller-notification\src\main\resources\META-INF\spring" />
       <recent name="C:\Users\Pc\IdeaProjects\task-management-system\task-management-system-presentation\task-management-system-presentation-spring-boot\task-management-system-presentation-spring-boot-controller\task-management-system-presentation-spring-boot-controller-activity-log\src\main\resources\META-INF\spring" />
-      <recent name="C:\Users\Pc\IdeaProjects\task-management-system\task-management-system-presentation\task-management-system-presentation-spring-boot\task-management-system-presentation-spring-boot-controller\task-management-system-presentation-spring-boot-controller-comment\src\main\resources\META-INF\spring" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pc\IdeaProjects\task-management-system\task-management-system-presentation\task-management-system-presentation-spring-boot\task-management-system-presentation-spring-boot-exception\src\main\resources\META-INF" />
@@ -295,8 +304,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.27258.48" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.27258.48" />
       </set>
     </attachedChunks>
   </component>
@@ -331,7 +340,21 @@
       <workItem from="1786106561577" duration="98000" />
       <workItem from="1786106799353" duration="1736000" />
       <workItem from="1786186394132" duration="24369000" />
-      <workItem from="1786280421644" duration="11142000" />
+      <workItem from="1786280421644" duration="17462000" />
+      <workItem from="1786903345551" duration="637000" />
+      <workItem from="1786976026937" duration="1372000" />
+      <workItem from="1786977473402" duration="1730000" />
+      <workItem from="1787009070861" duration="3981000" />
+      <workItem from="1787066631955" duration="6217000" />
+      <workItem from="1787149378003" duration="51000" />
+      <workItem from="1787401807882" duration="11203000" />
+      <workItem from="1787481275086" duration="5291000" />
+      <workItem from="1787499011484" duration="183000" />
+      <workItem from="1787499398606" duration="3459000" />
+      <workItem from="1787502879190" duration="111000" />
+      <workItem from="1787568272818" duration="5166000" />
+      <workItem from="1787578371286" duration="54000" />
+      <workItem from="1787592608579" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <option name="closed" value="true" />
@@ -421,7 +444,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786108912347</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: finish backend">
+      <option name="closed" value="true" />
+      <created>1786291964108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1786291964108</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +475,11 @@
     <MESSAGE value="feat: complete security config logic before jwt" />
     <MESSAGE value="feat: complete jwt security" />
     <MESSAGE value="feat: complete back except notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: complete back except notification" />
+    <MESSAGE value="feat: finish backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: finish backend" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

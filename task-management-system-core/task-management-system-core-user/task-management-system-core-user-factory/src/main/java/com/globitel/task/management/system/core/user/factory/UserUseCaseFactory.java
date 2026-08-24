@@ -33,4 +33,6 @@ public interface UserUseCaseFactory {
     ValidatorSupplierUseCase<UserResponse> getCurrentUserUseCase();
 
     ValidatorFunctionalUseCase<UserResponse,String> findUserByUuidUseCase();
+
+    ValidatorFunctionalUseCase<LoginResponse,String> returnUserDataAfterAuthenticatedUseCase();
 }

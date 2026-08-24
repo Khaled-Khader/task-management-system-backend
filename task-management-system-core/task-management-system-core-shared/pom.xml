@@ -21,6 +21,8 @@
         <module>task-management-system-core-shared-security-context-impl</module>
         <module>task-management-system-core-shared-socket</module>
         <module>task-management-system-core-shared-socket-impl</module>
+        <module>task-management-system-core-shared-technologies</module>
+        <module>task-management-system-core-shared-technologies-impl</module>
     </modules>
 
 

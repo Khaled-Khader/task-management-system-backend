@@ -48,8 +48,14 @@ public class TaskJpa implements TaskDao {
         return taskRepository.deleteTaskByUuid(uuid);
     }
 
+
     @Override
     public List<TaskIdentity> findTasksByUser(UserIdentity userIdentity) {
         return taskRepository.findByUser((UserEntity) userIdentity);
+    }
+
+    @Override
+    public void makeUserNull(UserIdentity userIdentity) {
+        taskRepository.makeUserNull((UserEntity) userIdentity);
     }
 }

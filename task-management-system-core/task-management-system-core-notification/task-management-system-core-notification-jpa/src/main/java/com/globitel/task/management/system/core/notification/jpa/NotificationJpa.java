@@ -44,6 +44,11 @@ public class NotificationJpa implements NotificationDao {
     }
 
     @Override
+    public int deleteByUser(UserIdentity userIdentity) {
+        return notificationRepository.deleteByUser((UserEntity) userIdentity);
+    }
+
+    @Override
     public List<NotificationIdentity> findAllByUser(UserIdentity userIdentity) {
         return List.copyOf(notificationRepository.findAllByUser((UserEntity) userIdentity));
     }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="updateChangeLogPath" value="task-management-system-presentation/task-management-system-presentation-spring-boot/task-management-system-presentation-spring-boot-main/src/main/resources/db/changelog/db.changelog-master.yaml" />
+    <option name="updateDbConnectionName" value="0b0b3d7b-24e1-4dec-b514-eb5ae791bdc4" />
+  </component>
+</project>

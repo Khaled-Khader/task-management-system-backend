@@ -23,8 +23,6 @@
         <module>task-management-system-core-user-function</module>
         <module>task-management-system-core-user-function-impl</module>
         <module>task-management-system-core-user-factory-domain</module>
-        <module>task-management-system-core-user-factory-security</module>
-        <module>task-management-system-core-user-factory-socket</module>
     </modules>
 
 

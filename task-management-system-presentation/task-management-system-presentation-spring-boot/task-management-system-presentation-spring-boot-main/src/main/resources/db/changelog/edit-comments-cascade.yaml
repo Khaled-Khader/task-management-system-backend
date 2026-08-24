@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: remove-comments-cascade
+      author: Khaled
+      changes:
+
+        - dropForeignKeyConstraint:
+            baseTableName: comments
+            constraintName: fk_comments_task
+
+        - addForeignKeyConstraint:
+            baseTableName: comments
+            baseColumnNames: task_uuid
+            referencedTableName: tasks
+            referencedColumnNames: uuid
+            constraintName: fk_comments_task
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+
+        - dropForeignKeyConstraint:
+            baseTableName: comments
+            constraintName: fk_comments_parent
+
+        - addForeignKeyConstraint:
+            baseTableName: comments
+            baseColumnNames: replayed_comment_uuid
+            referencedTableName: comments
+            referencedColumnNames: uuid
+            constraintName: fk_comments_parent
+            onDelete: RESTRICT
+            onUpdate: CASCADE

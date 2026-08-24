@@ -10,4 +10,5 @@ import com.globitel.task.management.system.core.user.identity.UserIdentity;
 public interface TokenUseCaseFactoryDomain {
     ValidatorFunctionalUseCase< CreateTokenResponse,CreateTokenRequest> createTokenUseCase();
     ValidatorConsumerUseCase<UserIdentity> deniedTokensByUserUseCase();
+    ValidatorFunctionalUseCase<Integer, UserIdentity> deleteTokenByUserUseCase();
 }

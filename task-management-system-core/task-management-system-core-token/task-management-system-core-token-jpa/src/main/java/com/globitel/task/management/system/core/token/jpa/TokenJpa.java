@@ -59,4 +59,9 @@ public class TokenJpa implements TokenDao {
         tokenRepository.denyAllTokensForUser((UserEntity) userIdentity);
     }
 
+    @Override
+    public int deleteTokensByUserEntity(UserIdentity userIdentity) {
+        return tokenRepository.deleteByUser((UserEntity) userIdentity);
+    }
+
 }

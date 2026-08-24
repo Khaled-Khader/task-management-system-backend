@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-entity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-factory/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-activitylog/task-management-system-core-activitylog-identity/src/main/java" charset="UTF-8" />
@@ -77,6 +79,10 @@
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-socket/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies-impl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-technologies/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-usecase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-shared/task-management-system-core-shared-usecase/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/task-management-system-core/task-management-system-core-task/src/main/java" charset="UTF-8" />

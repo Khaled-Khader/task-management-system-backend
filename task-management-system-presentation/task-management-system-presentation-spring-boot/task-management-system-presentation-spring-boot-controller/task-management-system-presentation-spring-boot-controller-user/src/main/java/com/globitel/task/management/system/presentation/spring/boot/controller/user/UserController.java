@@ -3,11 +3,9 @@ package com.globitel.task.management.system.presentation.spring.boot.controller.
 import com.globitel.task.management.system.core.user.factory.request.*;
 import com.globitel.task.management.system.core.user.factory.response.*;
 import com.globitel.task.management.system.core.user.factory.UserUseCaseFactory;
-import com.globitel.task.management.system.core.user.factory.security.UserUseCaseSecurityFactory;
 import com.globitel.task.management.system.core.user.factory.security.request.LoginRequest;
-import com.globitel.task.management.system.core.user.factory.security.response.LoginResponse;
 import com.globitel.task.management.system.presentation.spring.boot.aop.ActivityLog;
-import com.globitel.task.management.system.presentation.spring.boot.controller.user.response.LoginApiResponse;
+import com.globitel.task.management.system.presentation.spring.boot.security.TMSSpringAuthenticator;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -24,7 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     private final UserUseCaseFactory userUseCaseFactory;
-    private final UserUseCaseSecurityFactory userUseCaseSecurityFactory;
+    private final TMSSpringAuthenticator tmsSpringAuthenticator;
 
     @ActivityLog("CREATE USER")
     @PreAuthorize("hasRole('ADMIN')")
@@ -82,7 +80,7 @@ public class UserController {
     @ActivityLog(value = "USER LOGIN")
     @PostMapping("login")
     public ResponseEntity<UserResponse> login(@RequestBody LoginRequest loginRequest, HttpServletResponse response) {
-        LoginResponse loginResponse = userUseCaseSecurityFactory.loginUseCase().execute(loginRequest);
+        LoginResponse loginResponse = tmsSpringAuthenticator.authenticate(loginRequest);
 
         ResponseCookie cookie = ResponseCookie
                 .from("access_token", loginResponse.token())

@@ -5,6 +5,8 @@ import com.globitel.task.management.system.core.activitylog.dao.ActivityLogDao;
 import com.globitel.task.management.system.core.activitylog.dao.ActivityLogUpdater;
 import com.globitel.task.management.system.core.activitylog.entity.ActivityLogEntity;
 import com.globitel.task.management.system.core.activitylog.identity.ActivityLogIdentity;
+import com.globitel.task.management.system.core.user.entity.UserEntity;
+import com.globitel.task.management.system.core.user.identity.UserIdentity;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -38,6 +40,11 @@ public class ActivityLogJpa implements ActivityLogDao {
     @Override
     public ActivityLogUpdater updater(ActivityLogIdentity entity) {
         return null;
+    }
+
+    @Override
+    public int deleteByUser(UserIdentity userIdentity) {
+        return activityLogRepository.deleteByUser((UserEntity) userIdentity);
     }
 
     @Override

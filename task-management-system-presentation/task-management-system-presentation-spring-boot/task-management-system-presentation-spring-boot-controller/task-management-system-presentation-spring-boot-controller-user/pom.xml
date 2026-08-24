@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
-            <artifactId>task-management-system-core-user-factory-security</artifactId>
+            <artifactId>task-management-system-presentation-spring-boot-security</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>

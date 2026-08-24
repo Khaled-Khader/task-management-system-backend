@@ -53,8 +53,8 @@ public class ViewTaskDataByAdminUseCase extends ValidatorFunctionalUseCase<TaskD
                         taskIdentity.getUuid(),
                         taskIdentity.getTitle(),
                         taskIdentity.getDescription(),
-                        taskIdentity.getUser().getUuid(),
-                        taskIdentity.getUser().getUserName(),
+                        taskIdentity.getUser()!=null?taskIdentity.getUser().getUuid():null,
+                        taskIdentity.getUser()!=null?taskIdentity.getUser().getName():null,
                         taskIdentity.getDueDate(),
                         taskIdentity.getTaskStatus()
                 ),

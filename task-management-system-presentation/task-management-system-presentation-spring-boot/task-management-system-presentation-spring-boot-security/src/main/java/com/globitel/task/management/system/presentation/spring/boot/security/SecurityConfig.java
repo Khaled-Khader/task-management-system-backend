@@ -70,4 +70,9 @@ public class SecurityConfig {
         return new TaskManagementTokenValidationFilter( userDetailsService, tokenUseCaseFactory, userUseCaseFactory,objectMapper);
     }
 
+    @Bean
+    public TMSSpringAuthenticator tmsSpringAuthenticator(AuthenticationManager authenticationManager,UserUseCaseFactory userUseCaseFactory) {
+        return new TMSSpringAuthenticator(authenticationManager,userUseCaseFactory);
+    }
+
 }

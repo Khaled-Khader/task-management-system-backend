@@ -3,6 +3,7 @@ package com.globitel.task.management.system.core.comment.jpa;
 import com.globitel.task.management.system.core.comment.entity.CommentEntity;
 import com.globitel.task.management.system.core.comment.identity.CommentIdentity;
 import com.globitel.task.management.system.core.task.entity.TaskEntity;
+import com.globitel.task.management.system.core.user.entity.UserEntity;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -22,16 +23,34 @@ public interface CommentRepository extends JpaRepository<CommentEntity, String> 
     @Query("""
     DELETE FROM CommentEntity c
     WHERE c.task = :task
-      AND c.replayedComment IS NOT NULL
 """)
-    void deleteRepliesByTask(@Param("task") TaskEntity task);
+    int deleteByTask(@Param("task") TaskEntity task);
+
 
     @Modifying
     @Transactional
     @Query("""
-    DELETE FROM CommentEntity c
-    WHERE c.task = :task
-      AND c.replayedComment IS NULL
+
+UPDATE  CommentEntity c
+SET c.replayedComment=null
+where c.task=:task
 """)
-    void deleteParentCommentsByTask(@Param("task") TaskEntity task);
+    void makeReplayedNullByTask(@Param("task") TaskEntity task);
+
+    @Modifying
+    @Query("""
+    DELETE FROM CommentEntity c
+    WHERE c.user=:user
+""")
+    int deleteByUser(@Param("user") UserEntity userEntity);
+
+
+    @Modifying
+    @Query("""
+
+UPDATE  CommentEntity c
+SET c.replayedComment=null
+where c.user=:user
+""")
+    void makeReplayedNullByUser(@Param("user")UserEntity userEntity);
 }

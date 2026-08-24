@@ -24,7 +24,7 @@ public class FindTasksForUserUseCase extends ValidatorSupplierUseCase<List<TaskR
         UserIdentity currentUser=userUseCaseFactoryDomain.findUserByUsernameUseCase().execute(userName);
         List<TaskIdentity> tasks=taskDao.findTasksByUser(currentUser);
         return tasks.stream().map(
-                task -> new TaskResponse(task.getUuid(), task.getTitle(), task.getDescription(), task.getUser().getUuid(),task.getUser().getUserName(), task.getDueDate(), task.getTaskStatus())
+                task -> new TaskResponse(task.getUuid(), task.getTitle(), task.getDescription(), task.getUser().getUuid(),task.getUser()!=null?task.getUser().getName():null, task.getDueDate(), task.getTaskStatus())
         ).toList();
     }
 }

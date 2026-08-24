@@ -9,4 +9,5 @@ import java.util.List;
 public interface TaskDao extends Dao<TaskIdentity,TaskCreator,TaskUpdater> {
     int deleteTask(String uuid);
     List<TaskIdentity> findTasksByUser(UserIdentity userIdentity);
+    void makeUserNull(UserIdentity userIdentity);
 }

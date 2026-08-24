@@ -27,14 +27,9 @@ public class DeleteTaskUseCase extends ValidatorFunctionalUseCase<DeleteTaskResp
         TaskIdentity taskIdentity = taskDao.find(request.uuid())
                 .orElseThrow(() ->
                         new BadRequestException(TaskError.TASK_NOT_FOUND));
-
-
-        commentUseCaseFactoryDomain
-                .deleteCommentsByTaskIdentity(taskIdentity);
-
-
-        int count = taskDao.deleteTask(request.uuid());
-
-        return new DeleteTaskResponse(count);
+        int deletedComments=commentUseCaseFactoryDomain
+                .deleteCommentsByTaskIdentity().execute(taskIdentity);
+        int deletedTasks = taskDao.deleteTask(request.uuid());
+        return new DeleteTaskResponse(deletedTasks,deletedComments);
     }
 }

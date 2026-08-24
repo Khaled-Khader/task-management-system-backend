@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface NotificationDao extends Dao<NotificationIdentity,NotificationCreator,NotificationUpdater> {
 
+    int deleteByUser(UserIdentity userIdentity);
     List<NotificationIdentity> findAllByUser(UserIdentity userIdentity);
 }

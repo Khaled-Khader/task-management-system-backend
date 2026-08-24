@@ -1,10 +1,15 @@
 package com.globitel.task.management.system.core.user.usecase;
 
+import com.globitel.task.management.system.core.activitylog.factory.domain.ActivityLogUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.comment.factory.domain.CommentUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
 import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
+import com.globitel.task.management.system.core.shared.technologies.TransactionExecutor;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorSupplierUseCase;
+import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
+import com.globitel.task.management.system.core.token.factory.domain.TokenUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.user.dao.UserDao;
 import com.globitel.task.management.system.core.user.factory.request.*;
 import com.globitel.task.management.system.core.user.factory.response.*;
@@ -32,11 +37,12 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
     private final EditDataForUserUseCase editUserDataForUserUseCase;
     private final GetCurrentUserUseCase getCurrentUserUseCase;
     private final FindUserByIdUseCase findUserByIdUseCase;
+    private final ReturnUserDataAfterAuthenticatedUseCase returnUserDataAfterAuthenticatedUseCase;
 
-    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain) {
+    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor) {
         this.createUserUseCase = new CreateUserUseCase(validator, userDao, tmsPasswordEncoder);
         this.findAllUsersUseCase = new FindAllUsersUseCase(userDao);
-        this.deleteUserByUserNameUseCase = new DeleteUserByUserNameUseCase(validator, userDao);
+        this.deleteUserByUserNameUseCase = new DeleteUserByUserNameUseCase(validator, userDao,taskUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tokenUseCaseFactoryDomain,commentUseCaseFactoryDomain,activityLogUseCaseFactoryDomain,transactionExecutor);
         this.findAllUsersByUserRoleUseCase = new FindAllUsersByRoleUseCase(validator, userDao);
         this.findAllUsersByUserStatusUseCase = new FindAllUsersByStatusUseCase(validator, userDao);
         this.findAllUsersByNameUseCase = new FindAllUsersByNameUseCase(validator, userDao);
@@ -47,6 +53,7 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
         this.editUserDataForUserUseCase = new EditDataForUserUseCase(validator, userDao, tMSSecurityContext, tmsPasswordEncoder);
         this.getCurrentUserUseCase = new GetCurrentUserUseCase(tMSSecurityContext, userDao);
         this.findUserByIdUseCase = new FindUserByIdUseCase(validator, userDao);
+        this.returnUserDataAfterAuthenticatedUseCase=new ReturnUserDataAfterAuthenticatedUseCase(validator,tokenUseCaseFactoryDomain,userDao);
     }
 
     @Override
@@ -114,5 +121,9 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
         return findUserByIdUseCase;
     }
 
+    @Override
+    public ValidatorFunctionalUseCase<LoginResponse, String> returnUserDataAfterAuthenticatedUseCase() {
+        return returnUserDataAfterAuthenticatedUseCase;
+    }
 
 }

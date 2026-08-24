@@ -59,6 +59,7 @@ public class TaskUseCaseFactoryImpl implements TaskUseCaseFactory {
 
     @Override
     public ValidatorFunctionalUseCase<DeleteTaskResponse, DeleteTaskRequest> deleteTaskUseCase() {
+        System.out.println("delete task factory");
         return deleteTaskUseCase;
     }
 

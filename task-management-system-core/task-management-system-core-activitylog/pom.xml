@@ -19,6 +19,7 @@
         <module>task-management-system-core-activitylog-port</module>
         <module>task-management-system-core-activitylog-factory</module>
         <module>task-management-system-core-activitylog-jpa</module>
+        <module>task-management-system-core-activitylog-factory-domain</module>
     </modules>
 
 
