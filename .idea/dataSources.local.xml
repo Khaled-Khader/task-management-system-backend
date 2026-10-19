@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-261.27258.48">
+  <component name="dataSourceStorageLocal" created-in="IU-262.10968.63">
     <data-source name="@localhost" uuid="0b0b3d7b-24e1-4dec-b514-eb5ae791bdc4">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
       <secret-storage>master_key</secret-storage>
       <schema-mapping />
+    </data-source>
+    <data-source name="task-management-system@localhost" uuid="55369b7d-e24e-44b2-beff-4f6de41b7227">
+      <database-info product="MySQL" version="9.4.0" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-9.7.0 (Revision: 0aade1f13bcc98faf7dda5c02e782481eb291f62)" dbms="MYSQL" exact-version="9.4.0" exact-driver-version="9.7">
+        <extra-name-characters>$</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

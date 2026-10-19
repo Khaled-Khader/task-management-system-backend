@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: task-management-system-backend
+    labels:
+        name: task-management-system-backend
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+        app: task-management-system-backend
+  template:
+    metadata:
+        labels:
+            app: task-management-system-backend
+    spec:
+        containers:
+            - name: task-management-system-backend
+              image: khaleddd04/task-management-system:1.0.0
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: SPRING_DATASOURCE_URL
+                  value: jdbc:mysql://mysql-service:3306/khaled
+                - name: SPRING_DATASOURCE_USERNAME
+                  value: root
+                - name: SPRING_DATASOURCE_PASSWORD
+                  value: root
+                - name: ACTIVE_PROFILE
+                  value: prod
+
+              ports:
+                - containerPort: 8888
+                  protocol: TCP

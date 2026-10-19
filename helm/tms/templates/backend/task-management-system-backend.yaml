@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: task-management-system-backend
+    labels:
+        name: task-management-system-backend
+spec:
+  replicas: {{.Values.backend.replicas}}
+  selector:
+    matchLabels:
+        app: task-management-system-backend
+  template:
+    metadata:
+        labels:
+            app: task-management-system-backend
+    spec:
+        containers:
+            - name: task-management-system-backend
+              image: {{.Values.backend.image}}
+              imagePullPolicy: {{.Values.backend.imagePullPolicy}}
+              env:
+                - name: SPRING_DATASOURCE_URL
+                  value: {{.Values.backend.env.SPRING_DATASOURCE_URL}}
+                - name: SPRING_DATASOURCE_USERNAME
+                  value: {{.Values.backend.env.SPRING_DATASOURCE_USERNAME}}
+                - name: SPRING_DATASOURCE_PASSWORD
+                  value: {{.Values.backend.env.SPRING_DATASOURCE_PASSWORD}}
+                - name: ACTIVE_PROFILE
+                  value: {{.Values.backend.env.ACTIVE_PROFILE}}
+
+              ports:
+                - containerPort: {{.Values.backend.ports.containerPort}}
+                  protocol: {{.Values.backend.ports.protocol}}

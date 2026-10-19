@@ -1,0 +1,51 @@
+backend:
+  replicas: 5
+  image: khaleddd04/task-management-system:1.0.0
+  imagePullPolicy: IfNotPresent
+  env:
+    SPRING_DATASOURCE_URL: jdbc:mysql://mysql-service:3306/khaled
+    SPRING_DATASOURCE_USERNAME: root
+    SPRING_DATASOURCE_PASSWORD: root
+    ACTIVE_PROFILE: prod
+  ports:
+    containerPort: 8888
+    protocol: TCP
+
+
+backendServiceCluster:
+  port: 80
+  targetPort: 8888
+
+backendServiceNodePort:
+  port: 80
+  targetPort: 8888
+  nodePort: 30080
+
+frontend:
+  replicas: 5
+  image: task-management-frontend:1.0.4
+  imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+  ports:
+    containerPort: 80
+
+frontendServiceNodePort:
+  port: 80
+  targetPort: 80
+  nodePort: 30070
+
+db:
+  image: mysql:latest
+  imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+  env:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: khaled
+  ports:
+    containerPort: 3306
+
+dbServiceCluster:
+  port: 3306
+  targetPort: 3306
+
+

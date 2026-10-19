@@ -18,7 +18,9 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.38</lombok.version>
-        <spring-boot-version>4.0.6</spring-boot-version>
+        <spring-boot-version>4.0.8</spring-boot-version>
+        <jackson-bom.version>3.1.7</jackson-bom.version>
+        <logback.version>1.6.5</logback.version>
     </properties>
 
     <dependencies>
@@ -37,6 +39,11 @@
                 <version>${spring-boot-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>tools.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-bom.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

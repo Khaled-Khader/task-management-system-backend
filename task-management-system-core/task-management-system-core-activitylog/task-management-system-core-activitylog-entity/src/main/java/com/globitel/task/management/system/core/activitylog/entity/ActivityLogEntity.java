@@ -8,8 +8,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.xml.namespace.QName;
 import java.time.Instant;
+
+
 
 @Data
 @Entity
@@ -23,11 +24,11 @@ public class ActivityLogEntity extends BaseEntity implements ActivityLogIdentity
     @Column
     private Instant timestamp;
     @ManyToOne
-    @JoinColumn(name = "user_Uuid",nullable = false)
+    @JoinColumn(name = "user_Uuid", nullable = false)
     private UserEntity user;
 
-    public ActivityLogEntity(String uuid,Instant createdAt ,String action, Instant timestamp, UserEntity user) {
-        super(uuid,createdAt);
+    public ActivityLogEntity(String uuid, Instant createdAt, String action, Instant timestamp, UserEntity user) {
+        super(uuid, createdAt);
         this.action = action;
         this.timestamp = timestamp;
         this.user = user;

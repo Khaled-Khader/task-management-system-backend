@@ -5,6 +5,7 @@ import com.globitel.task.management.system.core.comment.factory.domain.CommentUs
 import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
 import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
+import com.globitel.task.management.system.core.shared.technologies.TMSCache;
 import com.globitel.task.management.system.core.shared.technologies.TransactionExecutor;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorFunctionalUseCase;
 import com.globitel.task.management.system.core.shared.usecase.ValidatorSupplierUseCase;
@@ -39,7 +40,7 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
     private final FindUserByIdUseCase findUserByIdUseCase;
     private final ReturnUserDataAfterAuthenticatedUseCase returnUserDataAfterAuthenticatedUseCase;
 
-    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor) {
+    public UserUseCaseFactoryImpl(Validator validator, UserDao userDao, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor, TMSCache tmsCache) {
         this.createUserUseCase = new CreateUserUseCase(validator, userDao, tmsPasswordEncoder);
         this.findAllUsersUseCase = new FindAllUsersUseCase(userDao);
         this.deleteUserByUserNameUseCase = new DeleteUserByUserNameUseCase(validator, userDao,taskUseCaseFactoryDomain,notificationUseCaseFactoryDomain,tokenUseCaseFactoryDomain,commentUseCaseFactoryDomain,activityLogUseCaseFactoryDomain,transactionExecutor);
@@ -47,7 +48,7 @@ public class UserUseCaseFactoryImpl implements UserUseCaseFactory {
         this.findAllUsersByUserStatusUseCase = new FindAllUsersByStatusUseCase(validator, userDao);
         this.findAllUsersByNameUseCase = new FindAllUsersByNameUseCase(validator, userDao);
         this.editUserDetailsUseCase = new EditUserDetailsUseCase(validator, userDao, tmsWebSocket,notificationUseCaseFactoryDomain);
-        this.findUserNameByUserUuidUseCase = new FindUserNameByUserUuidUseCase(validator, userDao);
+        this.findUserNameByUserUuidUseCase = new FindUserNameByUserUuidUseCase(validator, userDao,tmsCache);
         this.findUserByUserNameForSecurityUseCase = new FindUserByUserNameForSecurityUseCase(validator, userDao);
         this.viewUserDataUseCase = new ViewUserDataUseCase(userDao, tMSSecurityContext);
         this.editUserDataForUserUseCase = new EditDataForUserUseCase(validator, userDao, tMSSecurityContext, tmsPasswordEncoder);

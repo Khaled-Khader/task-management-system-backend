@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-management-system-backend-node-port
+spec:
+  selector:
+    app: task-management-system-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8888
+      nodePort: 30080
+  type: NodePort
+

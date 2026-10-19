@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+  labels:
+    name: mysql
+spec:
+  containers:
+    - name: mysql
+      image: {{.Values.db.image}}
+      imagePullPolicy: {{.Values.db.imagePullPolicy}}
+      ports:
+        - name: mysql
+          containerPort: {{.Values.db.ports.containerPort}}
+          protocol: TCP
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: {{.Values.db.env.MYSQL_ROOT_PASSWORD}}
+        - name: MYSQL_DATABASE
+          value: {{.Values.db.env.MYSQL_DATABASE}}
+  restartPolicy: {{.Values.db.restartPolicy}}
+  

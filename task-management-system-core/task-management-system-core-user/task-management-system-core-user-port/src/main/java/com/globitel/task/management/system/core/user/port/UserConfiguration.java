@@ -5,6 +5,7 @@ import com.globitel.task.management.system.core.comment.factory.domain.CommentUs
 import com.globitel.task.management.system.core.notification.factory.domain.NotificationUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.shared.security.context.TMSSecurityContext;
 import com.globitel.task.management.system.core.shared.socket.TMSWebSocket;
+import com.globitel.task.management.system.core.shared.technologies.TMSCache;
 import com.globitel.task.management.system.core.shared.technologies.TransactionExecutor;
 import com.globitel.task.management.system.core.task.factory.domain.TaskUseCaseFactoryDomain;
 import com.globitel.task.management.system.core.token.factory.domain.TokenUseCaseFactoryDomain;
@@ -49,8 +50,8 @@ public class UserConfiguration {
     }
 
     @Bean
-    public UserUseCaseFactory  userUseCaseFactory(UserDao userDao, Validator validator, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor) {
-        return new UserUseCaseFactoryImpl(validator,userDao,tmsPasswordEncoder,tMSSecurityContext,tmsWebSocket,notificationUseCaseFactoryDomain,taskUseCaseFactoryDomain,commentUseCaseFactoryDomain,tokenUseCaseFactoryDomain,activityLogUseCaseFactoryDomain,transactionExecutor);
+    public UserUseCaseFactory  userUseCaseFactory(UserDao userDao, Validator validator, TMSPasswordEncoder tmsPasswordEncoder, TMSSecurityContext tMSSecurityContext, TMSWebSocket tmsWebSocket, NotificationUseCaseFactoryDomain notificationUseCaseFactoryDomain, TaskUseCaseFactoryDomain taskUseCaseFactoryDomain, CommentUseCaseFactoryDomain commentUseCaseFactoryDomain, TokenUseCaseFactoryDomain tokenUseCaseFactoryDomain, ActivityLogUseCaseFactoryDomain activityLogUseCaseFactoryDomain, TransactionExecutor transactionExecutor, TMSCache tmsCache) {
+        return new UserUseCaseFactoryImpl(validator,userDao,tmsPasswordEncoder,tMSSecurityContext,tmsWebSocket,notificationUseCaseFactoryDomain,taskUseCaseFactoryDomain,commentUseCaseFactoryDomain,tokenUseCaseFactoryDomain,activityLogUseCaseFactoryDomain,transactionExecutor,tmsCache);
     }
 
     @Bean

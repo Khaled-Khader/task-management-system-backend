@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-management-system-frontend
+  labels:
+    app: task-management-system-frontend
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: task-management-system-frontend
+  template:
+    metadata:
+      name: task-management-system-frontend
+      labels:
+        app: task-management-system-frontend
+    spec:
+      containers:
+        - name: task-management-system-frontend
+          image: task-management-frontend:1.0.2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
