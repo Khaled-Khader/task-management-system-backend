@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60adedc0-c904-40fb-9a42-4ffb6889e001" name="Changes" comment="feat: edit backend">
-      <change afterPath="$PROJECT_DIR$/.github/actions/action.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/helm/tms/.helmignore" afterDir="false" />
@@ -80,7 +79,6 @@
         <option value="composer.json" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="GitHub Action" />
       </list>
     </option>
   </component>
@@ -244,6 +242,9 @@
     ]
   }
 }</component>
+  <component name="QodanaGithubNotificationPromoProjectDismissalState">
+    <option name="dismissed" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pc\Desktop\task-management-system\helm\tms\templates\db" />
@@ -388,7 +389,7 @@
       <workItem from="1791757675705" duration="2960000" />
       <workItem from="1792263836086" duration="1448000" />
       <workItem from="1792392540617" duration="369000" />
-      <workItem from="1792396891284" duration="2958000" />
+      <workItem from="1792396891284" duration="2655000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <option name="closed" value="true" />
