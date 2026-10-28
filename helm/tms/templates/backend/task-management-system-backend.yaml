@@ -27,6 +27,10 @@ spec:
                   value: {{.Values.backend.env.SPRING_DATASOURCE_PASSWORD}}
                 - name: ACTIVE_PROFILE
                   value: {{.Values.backend.env.ACTIVE_PROFILE}}
+                - name: REDIS_HOST
+                  value: {{.Values.backend.env.REDIS_HOST}}
+                - name: REDIS_PORT
+                  value: {{.Values.backend.env.REDIS_PORT}}
 
               ports:
                 - containerPort: {{.Values.backend.ports.containerPort}}

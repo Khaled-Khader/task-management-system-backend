@@ -7,6 +7,8 @@ backend:
     SPRING_DATASOURCE_USERNAME: root
     SPRING_DATASOURCE_PASSWORD: root
     ACTIVE_PROFILE: prod
+    REDIS_HOST: redis-service
+    REDIS_PORT: "6379"
   ports:
     containerPort: 8888
     protocol: TCP
