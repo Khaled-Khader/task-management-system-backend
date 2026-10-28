@@ -55,14 +55,15 @@ jobs:
         run: |
           docker push khaleddd04/task-management-system:${{ github.sha }}
 
+
       - name: Deploy backend with Helm
         shell: powershell
         run: |
           helm upgrade tms ./helm/tms `
-            --reuse-values `
             --set-string "backend.image=khaleddd04/task-management-system:${{ github.sha }}" `
             --wait `
             --timeout 5m
+      
 
       - name: Verify Kubernetes rollout
         shell: powershell
